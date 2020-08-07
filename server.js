@@ -18,7 +18,9 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"
+  process.env.MONGODB_URI ||
+    "mongodb://user:password123@ds129260.mlab.com:29260/heroku_qcgjz254",
+  { useMongoClient: true }
 );
 
 // Start the API server
